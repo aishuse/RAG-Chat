@@ -20,5 +20,4 @@ This system allows users to upload multiple files (PDF, DOCX, TXT), automaticall
 
 ---
 
-## 🏗️ System Architecture
 
