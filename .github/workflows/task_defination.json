@@ -1,0 +1,48 @@
+{
+    "family": "llmopstdlive",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "1024",
+    "memory": "8192",
+    "containerDefinitions": [
+      {
+        "name": "",
+        "image": "",
+        "cpu": 1024,
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 8080,
+            "hostPort": 8080,
+            "protocol": "tcp",
+            "name": "",
+            "appProtocol": "http"
+          }
+        ],
+        "environment": [
+          {
+            "name": "ENV",
+            "value": "production"
+          }
+        ],
+        "secrets": [
+          {
+            "name": "apikeyliveclass",
+            "valueFrom": ""
+          }
+  
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "ecs",
+            "awslogs-create-group": "true"
+          }
+        }
+      }
+    ]
+  }
+  
